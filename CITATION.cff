@@ -1,0 +1,30 @@
+# This CITATION.cff file was generated with cffinit.
+# Visit https://bit.ly/cffinit to generate yours today!
+
+cff-version: 1.2.0
+title: >-
+  ASHP_TES - Air source heat pump integrated with thermal
+  storage simulation library
+message: >-
+  If you use this software, please cite it using the
+  metadata from this file.
+type: software
+authors:
+  - given-names: Conrado
+    family-names: Ermel
+    affiliation: Federal University of Rio Grande do Sul - UFRGS
+    orcid: 'https://orcid.org/0000-0002-1010-7413'
+identifiers:
+  - type: doi
+    value: 10.5281/zenodo.7896105
+url: 'https://github.com/conradoermel/ASHP_TES.git'
+abstract: >-
+  Library to simulate air source heat pumps integrated with
+  thermal energy storage.
+keywords:
+  - Heat pumps
+  - Thermal energy storage
+  - HVAC
+license: MIT
+version: v0.0.1-alpha
+date-released: '2023-05-04'
