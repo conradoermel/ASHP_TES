@@ -16,7 +16,7 @@ authors:
     orcid: 'https://orcid.org/0000-0002-1010-7413'
 identifiers:
   - type: doi
-    value: 10.5281/zenodo.7896105
+    value: 10.5281/zenodo.7896200
 url: 'https://github.com/conradoermel/ASHP_TES.git'
 abstract: >-
   Library to simulate air source heat pumps integrated with
