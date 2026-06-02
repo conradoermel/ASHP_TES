@@ -1,13 +1,22 @@
 """
-ASHP Energy Model
+OPEN-SOURCE SIMULATION PLATFORM FOR AIR SOURCE HEAT PUMP INTEGRATED WITH THERMAL ENERGY STORAGE
 
-Author:         Conrado Ermel
-Date:           01/04/2022
-Last update:    05/04/2023
-Description:
-            - 3 zones model for the evaporator and condenser
-            - Scipy minimize function
+authors: Conrado Ermel, Marcus V.A. Bianchi & Paulo S. Schneider
+
+To cite this article: Conrado Ermel, Marcus V.A. Bianchi & Paulo S. Schneider (04 Jul
+2024): Open-source simulation platform for air source heat pump integrated with
+thermal energy storage, Science and Technology for the Built Environment, 
+DOI:10.1080/23744731.2024.2366134
+
+To link to this article: https://doi.org/10.1080/23744731.2024.2366134
+
+
+=== AIR SOURCE HEAT PUMP MODEL ===
+
+Please refer to the article for detailed description.
+
 """
+
 
 
 from scipy import optimize
@@ -18,7 +27,7 @@ from matplotlib import pyplot as plt
 import math
 from HX import condenser, evaporator
 from tqdm import tqdm
-from Diagrams import TSdiagSIMPLE, TSdiag, PHdiag
+
 
 
 
@@ -26,7 +35,6 @@ class HeatpumpAIR:
     """"Heat pump class:
         This Heat pump considers a 3 zone model for the condenser and the evaporator.
         It is suitable for air-air heat pumps.
-        If water is selected as condenser fluid, the refrigerant must be changed to 'R410a'.
         
         Inputs:
             rpm:                rpm, compressor rotation
@@ -179,7 +187,7 @@ class HeatpumpAIR:
             self.Capacity =     a['Capacity']
 
         else:
-            dif = 1                                                     # value away from the singularity to perform the interpolation
+            dif = 1      # value away from the singularity to perform the interpolation
             # Simulation with Tamb - 1 K
             self.Pguess=        [int(PropsSI('P', 'Q', 1, 'T', self.T_air_in -dif   -self.subcooling, self.fluid)),
                                   int(PropsSI('P', 'Q', 1, 'T', self.T_8            +self.superheating, self.fluid))]
@@ -256,7 +264,6 @@ class HeatpumpWATER:
         self.Condfluid =    Condfluid
 
         dec=                10          # decimal for some PropsSI functions
-        
         self.EV_HTC_air =   100         # W/m2K, heat transfer coefficient of Evaporator: air side
         
         
@@ -378,5 +385,3 @@ class HeatpumpWATER:
             self.E_balance =    (b['E_balance']+c['E_balance'])/2
             self.Capacity =     (b['Capacity']+c['Capacity'])/2
             
-
-
