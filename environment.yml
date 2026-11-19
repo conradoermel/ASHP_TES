@@ -1,0 +1,16 @@
+# Conda environment for the ASHP_TES simulation platform
+# Create with:   conda env create -f environment.yml
+# Activate with: conda activate ashp_tes
+name: ashp_tes
+channels:
+  - conda-forge
+dependencies:
+  - python=3.12
+  - numpy>=1.24
+  - scipy>=1.10
+  - matplotlib>=3.7
+  - pandas>=2.0
+  - xarray>=2023.1
+  - netcdf4>=1.6      
+  - tqdm>=4.60
+  - coolprop>=6.5     

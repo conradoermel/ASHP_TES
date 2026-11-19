@@ -14,3 +14,6 @@ Link the article: https://doi.org/10.1080/23744731.2024.2366134
 - _TES_: Class to model a simple TES based on energy balance calculations.
 - _ThermalLoad_: Class that calculates the envelope heating load of a given building according to the input characteristics.
 - _Climateimport_: Class used to import year-round weather data files from databases such as Copernicus or Energy Plus.
+
+## Installation
+See [Setup.md](Setup.md) for installation (`environment.yml` / `requirements.txt`) and how to run the simulation.

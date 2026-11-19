@@ -1,0 +1,10 @@
+# pip alternative to environment.yml (Python 3.10 - 3.12 recommended)
+# Install with: pip install -r requirements.txt
+numpy>=1.24
+scipy>=1.10
+matplotlib>=3.7
+pandas>=2.0
+xarray>=2023.1
+netCDF4>=1.6
+tqdm>=4.60
+CoolProp>=6.5
